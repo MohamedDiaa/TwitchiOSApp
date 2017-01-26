@@ -163,9 +163,7 @@
 			children = (
 				D91D2FBE1E3A70B8006B160B /* Model */,
 				D91D2FBC1E3A7031006B160B /* NetworkTypes.swift */,
-				D91D2FBA1E3A6FF4006B160B /* APIRequest.swift */,
-				D91D2FC11E3A759A006B160B /* TopGamesRequest.swift */,
-				D91D2FC31E3A75AA006B160B /* TopStreamsRequest.swift */,
+				D91D2FCB1E3A7930006B160B /* Requests */,
 				D91D2FBF1E3A7573006B160B /* NetworkOperation.swift */,
 			);
 			name = Network;
@@ -179,6 +177,16 @@
 				D91D2FC91E3A77CB006B160B /* ImageLinkNode.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		D91D2FCB1E3A7930006B160B /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				D91D2FBA1E3A6FF4006B160B /* APIRequest.swift */,
+				D91D2FC11E3A759A006B160B /* TopGamesRequest.swift */,
+				D91D2FC31E3A75AA006B160B /* TopStreamsRequest.swift */,
+			);
+			name = Requests;
 			sourceTree = "<group>";
 		};
 		FD7590D8060CEE30A7C971AA /* Frameworks */ = {

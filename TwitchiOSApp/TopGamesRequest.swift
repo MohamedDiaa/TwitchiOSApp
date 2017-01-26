@@ -24,7 +24,7 @@ final class TopGamesRequest: BackendAPIRequest {
         return nil
     }
     var headers: [String: String]? {
-        return nil
+        return self.defaultHeaders()
     }
     var showDebugPrint:Bool {
         return false

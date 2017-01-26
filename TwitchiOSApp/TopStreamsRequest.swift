@@ -10,7 +10,10 @@ import Foundation
 
 final class TopStreamsRequest: BackendAPIRequest {
     
-    //let game
+    let game:Game
+    init(game:Game) {
+        self.game = game
+    }
     
     var endpoint: String {
         return "https://api.twitch.tv/kraken/streams"
@@ -25,7 +28,7 @@ final class TopStreamsRequest: BackendAPIRequest {
         return nil
     }
     var headers: [String: String]? {
-        return nil
+        return self.defaultHeaders()
     }
     var showDebugPrint:Bool {
         return false

@@ -10,6 +10,7 @@ import Foundation
 
 struct Stream{
     
+    let id:Int
     let name:String
     let viewer:Int
     let logo:ImageLinkNode?

@@ -9,6 +9,7 @@
 import Foundation
 struct Game{
     
+    let id:Int
     let name:String
     let viewers:Int
     let logo:ImageLinkNode?
