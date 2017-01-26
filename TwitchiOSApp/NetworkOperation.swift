@@ -41,7 +41,6 @@ func listGames(request:TopGamesRequest,success:@escaping (_ games:[Game])->(), f
                                 
                                 let game = Game(id: id, name: name, viewers: viewers, logo: imageNode)
                                 games.append(game)
-
                               }
                         else {
                             let game = Game(id: id, name: name, viewers: viewers, logo: nil)
@@ -60,5 +59,12 @@ func listGames(request:TopGamesRequest,success:@escaping (_ games:[Game])->(), f
     }
  }
 
+    
+    func listStreams(request:TopStreamsRequest,success:@escaping (_ streams:[Stream])->(), failure:@escaping ()->()){
+        
+    
+    }
+    
+    
 }
     

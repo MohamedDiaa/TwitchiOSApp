@@ -23,6 +23,9 @@
 		D91D2FC61E3A76E7006B160B /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91D2FC51E3A76E7006B160B /* Game.swift */; };
 		D91D2FC81E3A76F2006B160B /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91D2FC71E3A76F2006B160B /* Stream.swift */; };
 		D91D2FCA1E3A77CB006B160B /* ImageLinkNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91D2FC91E3A77CB006B160B /* ImageLinkNode.swift */; };
+		D91D2FCE1E3AB61C006B160B /* GamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91D2FCD1E3AB61C006B160B /* GamesViewController.swift */; };
+		D91D2FD01E3AB6AA006B160B /* GameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D91D2FCF1E3AB6AA006B160B /* GameTableViewCell.xib */; };
+		D91D2FD21E3AB782006B160B /* GameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91D2FD11E3AB782006B160B /* GameTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +69,9 @@
 		D91D2FC51E3A76E7006B160B /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		D91D2FC71E3A76F2006B160B /* Stream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stream.swift; sourceTree = "<group>"; };
 		D91D2FC91E3A77CB006B160B /* ImageLinkNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLinkNode.swift; sourceTree = "<group>"; };
+		D91D2FCD1E3AB61C006B160B /* GamesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesViewController.swift; sourceTree = "<group>"; };
+		D91D2FCF1E3AB6AA006B160B /* GameTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameTableViewCell.xib; sourceTree = "<group>"; };
+		D91D2FD11E3AB782006B160B /* GameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTableViewCell.swift; sourceTree = "<group>"; };
 		E928D4005B1A6395F4A3FD3B /* Pods_TwitchiOSApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwitchiOSApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -129,6 +135,7 @@
 		D91D2F891E3A68A2006B160B /* TwitchiOSApp */ = {
 			isa = PBXGroup;
 			children = (
+				D91D2FCC1E3AB603006B160B /* UI */,
 				D91D2FB91E3A6FAD006B160B /* Network */,
 				D91D2F8A1E3A68A2006B160B /* AppDelegate.swift */,
 				D91D2F8C1E3A68A2006B160B /* ViewController.swift */,
@@ -187,6 +194,16 @@
 				D91D2FC31E3A75AA006B160B /* TopStreamsRequest.swift */,
 			);
 			name = Requests;
+			sourceTree = "<group>";
+		};
+		D91D2FCC1E3AB603006B160B /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				D91D2FCD1E3AB61C006B160B /* GamesViewController.swift */,
+				D91D2FD11E3AB782006B160B /* GameTableViewCell.swift */,
+				D91D2FCF1E3AB6AA006B160B /* GameTableViewCell.xib */,
+			);
+			name = UI;
 			sourceTree = "<group>";
 		};
 		FD7590D8060CEE30A7C971AA /* Frameworks */ = {
@@ -313,6 +330,7 @@
 				D91D2F951E3A68A2006B160B /* LaunchScreen.storyboard in Resources */,
 				D91D2F921E3A68A2006B160B /* Assets.xcassets in Resources */,
 				D91D2F901E3A68A2006B160B /* Main.storyboard in Resources */,
+				D91D2FD01E3AB6AA006B160B /* GameTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,9 +410,11 @@
 				D91D2FC01E3A7573006B160B /* NetworkOperation.swift in Sources */,
 				D91D2FBB1E3A6FF4006B160B /* APIRequest.swift in Sources */,
 				D91D2FC41E3A75AA006B160B /* TopStreamsRequest.swift in Sources */,
+				D91D2FCE1E3AB61C006B160B /* GamesViewController.swift in Sources */,
 				D91D2F8B1E3A68A2006B160B /* AppDelegate.swift in Sources */,
 				D91D2FC81E3A76F2006B160B /* Stream.swift in Sources */,
 				D91D2FC61E3A76E7006B160B /* Game.swift in Sources */,
+				D91D2FD21E3AB782006B160B /* GameTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

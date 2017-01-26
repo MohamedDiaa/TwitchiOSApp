@@ -13,6 +13,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let gameController = GamesViewController()
+        
+        let navController = UINavigationController(rootViewController: gameController)
+        self.addChildViewController(navController)
+        navController.view.frame = self.view.bounds
+        self.view.addSubview(navController.view)
     }
 
     override func didReceiveMemoryWarning() {
