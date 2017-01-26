@@ -27,13 +27,26 @@ func listGames(request:TopGamesRequest,success:@escaping (_ games:[Game])->(), f
         case .success(let json):
             print(json)
             
-            if let json = json as? [String:Any], let data = json["data"] as? [[String:Any]]{
+            if let json = json as? [String:Any], let top = json["top"] as? [String:Any],let gameObjectList = top["game"] as? [[String:Any]]{
+                
+                let viewers = top["viewers"] as? Int ?? 0
                 
                 var games = [Game]()
-                for datum in data{
-                    if let id = datum["id"] as? Int, let name = datum["name"] as? String{
-                        let game = Game(id: id, name: name, viewers: 0, logo: nil)
-                        games.append(game)
+                for gameObject in gameObjectList{
+                    if let id = gameObject["_id"] as? Int, let name = gameObject["name"] as? String{
+                        
+                        if let logo = gameObject["logo"] as? [String:String],let large = logo["large"] ,let medium = logo["medium"],let small = logo["small"] , let template = logo["template"]
+                            {
+                                let imageNode = ImageLinkNode(large: URL(string: large), medium: URL(string: medium), small: URL(string: small), template: URL(string: template))
+                                
+                                let game = Game(id: id, name: name, viewers: viewers, logo: imageNode)
+                                games.append(game)
+
+                              }
+                        else {
+                            let game = Game(id: id, name: name, viewers: viewers, logo: nil)
+                            games.append(game)
+                        }
                     }
                 }
                 return success(games)
@@ -45,13 +58,7 @@ func listGames(request:TopGamesRequest,success:@escaping (_ games:[Game])->(), f
         }
 
     }
-    /*
-    manager.request(request.endpoint, method: HTTPMethod.get, parameters: request.parameters, encoding: request.query.encoding, headers: request.headers).responseJSON { (response) in
-        
-        
-        }
-     */
-    }
+ }
 
 }
     
