@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class GameTableViewCell: UITableViewCell {
 
@@ -18,8 +19,31 @@ class GameTableViewCell: UITableViewCell {
     
     func setGame(game:Game){
             self.game = game
+            self.clean()
+            self.fillData()
     }
     
+    func fillData(){
+        if let game = self.game{
+            self.gameTitleLabel.text = game.name
+            self.gameViewersLabel.text = "\(game.viewers)"
+            
+            //let imageSize = CGSize(width: self.bounds.size.width * self.contentScaleFactor , height: self.bounds.size.height * contentScaleFactor)
+            
+            let imageSize = CGSize(width: 1000 , height: 800)
+
+            if let logoNode = game.logo,let logoURL = logoNode.getImage(size: imageSize){
+                
+                self.gameImageView.af_setImage(withURL: logoURL)
+            }
+        }
+    }
+    func clean(){
+        self.gameViewersLabel.text = nil
+        self.gameTitleLabel.text = nil
+        self.gameImageView.image = nil
+    }
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -11,6 +11,15 @@ import Foundation
 
 final class TopGamesRequest: BackendAPIRequest {
     
+      let limit:Int?
+      let offset:Int?
+    
+    init(limit:Int?,offset:Int? = nil){
+        
+        self.limit = limit
+        self.offset = offset
+    }
+
     var endpoint: String {
         return "https://api.twitch.tv/kraken/games/top"
     }
@@ -21,7 +30,18 @@ final class TopGamesRequest: BackendAPIRequest {
         return NetworkEncoding.path
     }
     var parameters: [String: Any]? {
-        return nil
+        var param = [String:Any]()
+        
+        if let limit = self.limit{
+            
+            param["limit"] = limit
+        }
+        if let offset = self.offset{
+            
+            param["offset"] = offset
+        }
+        return param
+
     }
     var headers: [String: String]? {
         return self.defaultHeaders()
@@ -32,5 +52,5 @@ final class TopGamesRequest: BackendAPIRequest {
     var requireAuthentication:Bool{
         return true
     }
-    
+ 
 }

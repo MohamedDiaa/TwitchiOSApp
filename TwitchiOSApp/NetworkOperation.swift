@@ -20,24 +20,21 @@ public class NetworkOperation{
 
 
 func listGames(request:TopGamesRequest,success:@escaping (_ games:[Game])->(), failure:@escaping ()->()){
-    
-    manager.request(request.endpoint, headers: request.headers).responseJSON { (response) in
+    manager.request(request.endpoint,parameters: request.parameters, headers: request.headers).responseJSON { (response) in
     
         switch(response.result){
         case .success(let json):
             print(json)
             
-            if let json = json as? [String:Any], let top = json["top"] as? [String:Any],let gameObjectList = top["game"] as? [[String:Any]]{
-                
-                let viewers = top["viewers"] as? Int ?? 0
+            if let json = json as? [String:Any], let top = json["top"] as? [[String:Any]]{
                 
                 var games = [Game]()
-                for gameObject in gameObjectList{
-                    if let id = gameObject["_id"] as? Int, let name = gameObject["name"] as? String{
+                for entity in top{
+                    if let gameDic = entity["game"] as? [String:Any] ,let viewers = entity["viewers"] as? Int ,let id = gameDic["_id"] as? Int, let name = gameDic["name"] as? String{
                         
-                        if let logo = gameObject["logo"] as? [String:String],let large = logo["large"] ,let medium = logo["medium"],let small = logo["small"] , let template = logo["template"]
+                        if let logo = gameDic["logo"] as? [String:String],let large = logo["large"] ,let medium = logo["medium"],let small = logo["small"] , let template = logo["template"]
                             {
-                                let imageNode = ImageLinkNode(large: URL(string: large), medium: URL(string: medium), small: URL(string: small), template: URL(string: template))
+                                let imageNode = ImageLinkNode(large: URL(string: large), medium: URL(string: medium), small: URL(string: small), template: template)
                                 
                                 let game = Game(id: id, name: name, viewers: viewers, logo: imageNode)
                                 games.append(game)

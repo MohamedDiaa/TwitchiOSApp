@@ -23,7 +23,7 @@ class GamesViewController: UITableViewController {
 
         self.tableView.register(UINib(nibName: "GameTableViewCell", bundle: nil), forCellReuseIdentifier: "GameTableViewCell")
         
-        NetworkOperation.sharedInstance.listGames(request: TopGamesRequest(), success: {games in
+        NetworkOperation.sharedInstance.listGames(request: TopGamesRequest(limit: 5), success: {games in
             self.games = games
             self.tableView.reloadData()
         }, failure: {
