@@ -15,6 +15,14 @@
 		D91D2F951E3A68A2006B160B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D91D2F931E3A68A2006B160B /* LaunchScreen.storyboard */; };
 		D91D2FA01E3A68A2006B160B /* TwitchiOSAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91D2F9F1E3A68A2006B160B /* TwitchiOSAppTests.swift */; };
 		D91D2FAB1E3A68A2006B160B /* TwitchiOSAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91D2FAA1E3A68A2006B160B /* TwitchiOSAppUITests.swift */; };
+		D91D2FBB1E3A6FF4006B160B /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91D2FBA1E3A6FF4006B160B /* APIRequest.swift */; };
+		D91D2FBD1E3A7031006B160B /* NetworkTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91D2FBC1E3A7031006B160B /* NetworkTypes.swift */; };
+		D91D2FC01E3A7573006B160B /* NetworkOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91D2FBF1E3A7573006B160B /* NetworkOperation.swift */; };
+		D91D2FC21E3A759A006B160B /* TopGamesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91D2FC11E3A759A006B160B /* TopGamesRequest.swift */; };
+		D91D2FC41E3A75AA006B160B /* TopStreamsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91D2FC31E3A75AA006B160B /* TopStreamsRequest.swift */; };
+		D91D2FC61E3A76E7006B160B /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91D2FC51E3A76E7006B160B /* Game.swift */; };
+		D91D2FC81E3A76F2006B160B /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91D2FC71E3A76F2006B160B /* Stream.swift */; };
+		D91D2FCA1E3A77CB006B160B /* ImageLinkNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91D2FC91E3A77CB006B160B /* ImageLinkNode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +58,14 @@
 		D91D2FA61E3A68A2006B160B /* TwitchiOSAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwitchiOSAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D91D2FAA1E3A68A2006B160B /* TwitchiOSAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitchiOSAppUITests.swift; sourceTree = "<group>"; };
 		D91D2FAC1E3A68A2006B160B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D91D2FBA1E3A6FF4006B160B /* APIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		D91D2FBC1E3A7031006B160B /* NetworkTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTypes.swift; sourceTree = "<group>"; };
+		D91D2FBF1E3A7573006B160B /* NetworkOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkOperation.swift; sourceTree = "<group>"; };
+		D91D2FC11E3A759A006B160B /* TopGamesRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopGamesRequest.swift; sourceTree = "<group>"; };
+		D91D2FC31E3A75AA006B160B /* TopStreamsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopStreamsRequest.swift; sourceTree = "<group>"; };
+		D91D2FC51E3A76E7006B160B /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		D91D2FC71E3A76F2006B160B /* Stream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stream.swift; sourceTree = "<group>"; };
+		D91D2FC91E3A77CB006B160B /* ImageLinkNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLinkNode.swift; sourceTree = "<group>"; };
 		E928D4005B1A6395F4A3FD3B /* Pods_TwitchiOSApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwitchiOSApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -113,6 +129,7 @@
 		D91D2F891E3A68A2006B160B /* TwitchiOSApp */ = {
 			isa = PBXGroup;
 			children = (
+				D91D2FB91E3A6FAD006B160B /* Network */,
 				D91D2F8A1E3A68A2006B160B /* AppDelegate.swift */,
 				D91D2F8C1E3A68A2006B160B /* ViewController.swift */,
 				D91D2F8E1E3A68A2006B160B /* Main.storyboard */,
@@ -139,6 +156,29 @@
 				D91D2FAC1E3A68A2006B160B /* Info.plist */,
 			);
 			path = TwitchiOSAppUITests;
+			sourceTree = "<group>";
+		};
+		D91D2FB91E3A6FAD006B160B /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D91D2FBE1E3A70B8006B160B /* Model */,
+				D91D2FBC1E3A7031006B160B /* NetworkTypes.swift */,
+				D91D2FBA1E3A6FF4006B160B /* APIRequest.swift */,
+				D91D2FC11E3A759A006B160B /* TopGamesRequest.swift */,
+				D91D2FC31E3A75AA006B160B /* TopStreamsRequest.swift */,
+				D91D2FBF1E3A7573006B160B /* NetworkOperation.swift */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		D91D2FBE1E3A70B8006B160B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D91D2FC51E3A76E7006B160B /* Game.swift */,
+				D91D2FC71E3A76F2006B160B /* Stream.swift */,
+				D91D2FC91E3A77CB006B160B /* ImageLinkNode.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		FD7590D8060CEE30A7C971AA /* Frameworks */ = {
@@ -337,8 +377,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D91D2FBD1E3A7031006B160B /* NetworkTypes.swift in Sources */,
+				D91D2FC21E3A759A006B160B /* TopGamesRequest.swift in Sources */,
 				D91D2F8D1E3A68A2006B160B /* ViewController.swift in Sources */,
+				D91D2FCA1E3A77CB006B160B /* ImageLinkNode.swift in Sources */,
+				D91D2FC01E3A7573006B160B /* NetworkOperation.swift in Sources */,
+				D91D2FBB1E3A6FF4006B160B /* APIRequest.swift in Sources */,
+				D91D2FC41E3A75AA006B160B /* TopStreamsRequest.swift in Sources */,
 				D91D2F8B1E3A68A2006B160B /* AppDelegate.swift in Sources */,
+				D91D2FC81E3A76F2006B160B /* Stream.swift in Sources */,
+				D91D2FC61E3A76E7006B160B /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -589,6 +637,7 @@
 				D91D2FB11E3A68A2006B160B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D91D2FB21E3A68A2006B160B /* Build configuration list for PBXNativeTarget "TwitchiOSAppTests" */ = {
 			isa = XCConfigurationList;
@@ -597,6 +646,7 @@
 				D91D2FB41E3A68A2006B160B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D91D2FB51E3A68A2006B160B /* Build configuration list for PBXNativeTarget "TwitchiOSAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -605,6 +655,7 @@
 				D91D2FB71E3A68A2006B160B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
