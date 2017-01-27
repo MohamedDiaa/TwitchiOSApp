@@ -12,7 +12,8 @@ class StreamsTableViewController: UITableViewController {
     
     var streams:[Stream]?
     var game:Game
-   
+    var limit = 5
+
     init(game:Game){
         self.game = game
         super.init(style: .plain)
@@ -30,7 +31,7 @@ class StreamsTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        self.title = "Top Streams"
+        self.title = "Top \(limit) Streams in \"\(self.game.name)\""
         self.tableView.register(UINib(nibName: "StreamTableViewCell", bundle: nil), forCellReuseIdentifier: "StreamTableViewCell")
 
         NetworkOperation.sharedInstance.listStreams(request: TopStreamsRequest(game: self.game, limit: 5), success: {streams in
@@ -73,7 +74,7 @@ class StreamsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
+        return 100
     }
 
 

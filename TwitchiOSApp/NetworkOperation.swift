@@ -65,6 +65,20 @@ public class NetworkOperation{
             switch(response.result){
             case .success(let json):
                 print(json)
+                if let json = json as? [String:Any], let streamsDicList = json["streams"] as? [[String:Any]]{
+                    
+                    var streams = [Stream]()
+                    for streamDic in streamsDicList{
+                        
+                        if let id = streamDic["_id"] as? Int,let viewers = streamDic["viewers"] as? Int, let channel = streamDic["channel"] as? [String:Any],let name = channel["display_name"] as? String,let preview = streamDic["preview"] as? [String:Any] ,let template = preview["template"] as? String{
+                        
+                            let node = ImageLinkNode(large: nil, medium: nil, small: nil, template: template)
+                            let s = Stream(id: id, name: name, viewers: viewers, logo: node)
+                            streams.append(s)
+                        }
+                    }
+                    return success(streams)
+                }
             
             case .failure(_):
                 failure()

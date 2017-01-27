@@ -11,6 +11,8 @@ import UIKit
 class GamesViewController: UITableViewController {
 
     var games:[Game]?
+    var limit = 5
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,11 +21,10 @@ class GamesViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        self.title = "Top Games"
+        self.title = "Top \(limit) Games"
 
         self.tableView.register(UINib(nibName: "GameTableViewCell", bundle: nil), forCellReuseIdentifier: "GameTableViewCell")
-        
-        NetworkOperation.sharedInstance.listGames(request: TopGamesRequest(limit: 5), success: {games in
+        NetworkOperation.sharedInstance.listGames(request: TopGamesRequest(limit: limit), success: {games in
             self.games = games
             self.tableView.reloadData()
         }, failure: {

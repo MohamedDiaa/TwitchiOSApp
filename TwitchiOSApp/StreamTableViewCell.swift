@@ -30,7 +30,7 @@ class StreamTableViewCell: UITableViewCell {
             
             //let imageSize = CGSize(width: self.bounds.size.width * self.contentScaleFactor , height: self.bounds.size.height * contentScaleFactor)
             
-            let imageSize = CGSize(width: 1000 , height: 800)
+            let imageSize = CGSize(width: 200 , height: 100)
             
             if let logoNode = stream.logo,let logoURL = logoNode.getImage(size: imageSize){
                 

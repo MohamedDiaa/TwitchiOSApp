@@ -33,6 +33,7 @@ final class TopStreamsRequest: BackendAPIRequest {
     var parameters: [String: Any]? {
         var param = [String:Any]()
         
+        param["game"] = game.name
         if let limit = self.limit{
             
             param["limit"] = limit
