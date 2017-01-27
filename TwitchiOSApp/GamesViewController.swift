@@ -19,7 +19,7 @@ class GamesViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        self.title = "Games"
+        self.title = "Top Games"
 
         self.tableView.register(UINib(nibName: "GameTableViewCell", bundle: nil), forCellReuseIdentifier: "GameTableViewCell")
         
@@ -62,5 +62,12 @@ class GamesViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let games = self.games , indexPath.row < games.count{
+            let streamVC = StreamsTableViewController(game: games[indexPath.row])
+            self.navigationController?.pushViewController(streamVC, animated: true)
+        }
     }
 }

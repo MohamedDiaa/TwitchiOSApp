@@ -62,6 +62,13 @@ public class NetworkOperation{
         
         manager.request(request.endpoint,parameters: request.parameters, headers: request.headers).responseJSON { (response) in
         
+            switch(response.result){
+            case .success(let json):
+                print(json)
+            
+            case .failure(_):
+                failure()
+            }
         }
     }
     
