@@ -19,8 +19,9 @@ public class NetworkOperation{
     }
 
 
-func listGames(request:TopGamesRequest,success:@escaping (_ games:[Game])->(), failure:@escaping ()->()){
-    manager.request(request.endpoint,parameters: request.parameters, headers: request.headers).responseJSON { (response) in
+    func listGames(request:TopGamesRequest,success:@escaping (_ games:[Game])->(), failure:@escaping ()->()){
+        
+        manager.request(request.endpoint,parameters: request.parameters, headers: request.headers).responseJSON { (response) in
     
         switch(response.result){
         case .success(let json):
@@ -59,7 +60,9 @@ func listGames(request:TopGamesRequest,success:@escaping (_ games:[Game])->(), f
     
     func listStreams(request:TopStreamsRequest,success:@escaping (_ streams:[Stream])->(), failure:@escaping ()->()){
         
-    
+        manager.request(request.endpoint,parameters: request.parameters, headers: request.headers).responseJSON { (response) in
+        
+        }
     }
     
     

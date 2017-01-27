@@ -26,6 +26,9 @@
 		D91D2FCE1E3AB61C006B160B /* GamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91D2FCD1E3AB61C006B160B /* GamesViewController.swift */; };
 		D91D2FD01E3AB6AA006B160B /* GameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D91D2FCF1E3AB6AA006B160B /* GameTableViewCell.xib */; };
 		D91D2FD21E3AB782006B160B /* GameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91D2FD11E3AB782006B160B /* GameTableViewCell.swift */; };
+		D91D2FD91E3AC48B006B160B /* StreamsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91D2FD81E3AC48B006B160B /* StreamsTableViewController.swift */; };
+		D91D2FDC1E3AC4A4006B160B /* StreamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91D2FDA1E3AC4A4006B160B /* StreamTableViewCell.swift */; };
+		D91D2FDD1E3AC4A4006B160B /* StreamTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D91D2FDB1E3AC4A4006B160B /* StreamTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +75,9 @@
 		D91D2FCD1E3AB61C006B160B /* GamesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesViewController.swift; sourceTree = "<group>"; };
 		D91D2FCF1E3AB6AA006B160B /* GameTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameTableViewCell.xib; sourceTree = "<group>"; };
 		D91D2FD11E3AB782006B160B /* GameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTableViewCell.swift; sourceTree = "<group>"; };
+		D91D2FD81E3AC48B006B160B /* StreamsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamsTableViewController.swift; sourceTree = "<group>"; };
+		D91D2FDA1E3AC4A4006B160B /* StreamTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamTableViewCell.swift; sourceTree = "<group>"; };
+		D91D2FDB1E3AC4A4006B160B /* StreamTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StreamTableViewCell.xib; sourceTree = "<group>"; };
 		E928D4005B1A6395F4A3FD3B /* Pods_TwitchiOSApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwitchiOSApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -199,11 +205,30 @@
 		D91D2FCC1E3AB603006B160B /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				D91D2FD71E3AC45B006B160B /* Stream UI */,
+				D91D2FD61E3AC452006B160B /* Game UI */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		D91D2FD61E3AC452006B160B /* Game UI */ = {
+			isa = PBXGroup;
+			children = (
 				D91D2FCD1E3AB61C006B160B /* GamesViewController.swift */,
 				D91D2FD11E3AB782006B160B /* GameTableViewCell.swift */,
 				D91D2FCF1E3AB6AA006B160B /* GameTableViewCell.xib */,
 			);
-			name = UI;
+			name = "Game UI";
+			sourceTree = "<group>";
+		};
+		D91D2FD71E3AC45B006B160B /* Stream UI */ = {
+			isa = PBXGroup;
+			children = (
+				D91D2FD81E3AC48B006B160B /* StreamsTableViewController.swift */,
+				D91D2FDA1E3AC4A4006B160B /* StreamTableViewCell.swift */,
+				D91D2FDB1E3AC4A4006B160B /* StreamTableViewCell.xib */,
+			);
+			name = "Stream UI";
 			sourceTree = "<group>";
 		};
 		FD7590D8060CEE30A7C971AA /* Frameworks */ = {
@@ -330,6 +355,7 @@
 				D91D2F951E3A68A2006B160B /* LaunchScreen.storyboard in Resources */,
 				D91D2F921E3A68A2006B160B /* Assets.xcassets in Resources */,
 				D91D2F901E3A68A2006B160B /* Main.storyboard in Resources */,
+				D91D2FDD1E3AC4A4006B160B /* StreamTableViewCell.xib in Resources */,
 				D91D2FD01E3AB6AA006B160B /* GameTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -405,8 +431,10 @@
 			files = (
 				D91D2FBD1E3A7031006B160B /* NetworkTypes.swift in Sources */,
 				D91D2FC21E3A759A006B160B /* TopGamesRequest.swift in Sources */,
+				D91D2FD91E3AC48B006B160B /* StreamsTableViewController.swift in Sources */,
 				D91D2F8D1E3A68A2006B160B /* ViewController.swift in Sources */,
 				D91D2FCA1E3A77CB006B160B /* ImageLinkNode.swift in Sources */,
+				D91D2FDC1E3AC4A4006B160B /* StreamTableViewCell.swift in Sources */,
 				D91D2FC01E3A7573006B160B /* NetworkOperation.swift in Sources */,
 				D91D2FBB1E3A6FF4006B160B /* APIRequest.swift in Sources */,
 				D91D2FC41E3A75AA006B160B /* TopStreamsRequest.swift in Sources */,

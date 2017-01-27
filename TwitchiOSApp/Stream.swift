@@ -12,7 +12,7 @@ struct Stream{
     
     let id:Int
     let name:String
-    let viewer:Int
+    let viewers:Int
     let logo:ImageLinkNode?
 }
 

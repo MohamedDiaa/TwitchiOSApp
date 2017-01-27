@@ -10,9 +10,14 @@ import Foundation
 
 final class TopStreamsRequest: BackendAPIRequest {
     
+    let limit:Int?
+    let offset:Int?
+    
     let game:Game
-    init(game:Game) {
+    init(game:Game,limit:Int?,offset:Int? = nil) {
         self.game = game
+        self.limit = limit
+        self.offset = offset
     }
     
     var endpoint: String {
@@ -24,9 +29,21 @@ final class TopStreamsRequest: BackendAPIRequest {
     var encoding: NetworkEncoding {
         return NetworkEncoding.path
     }
+    
     var parameters: [String: Any]? {
-        return nil
+        var param = [String:Any]()
+        
+        if let limit = self.limit{
+            
+            param["limit"] = limit
+        }
+        if let offset = self.offset{
+            
+            param["offset"] = offset
+        }
+        return param
     }
+
     var headers: [String: String]? {
         return self.defaultHeaders()
     }
