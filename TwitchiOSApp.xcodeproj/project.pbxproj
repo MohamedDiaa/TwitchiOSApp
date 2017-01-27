@@ -29,6 +29,7 @@
 		D91D2FD91E3AC48B006B160B /* StreamsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91D2FD81E3AC48B006B160B /* StreamsTableViewController.swift */; };
 		D91D2FDC1E3AC4A4006B160B /* StreamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91D2FDA1E3AC4A4006B160B /* StreamTableViewCell.swift */; };
 		D91D2FDD1E3AC4A4006B160B /* StreamTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D91D2FDB1E3AC4A4006B160B /* StreamTableViewCell.xib */; };
+		D93E26011E3AD55000102B51 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = D93E26001E3AD55000102B51 /* README.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		D91D2FD81E3AC48B006B160B /* StreamsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamsTableViewController.swift; sourceTree = "<group>"; };
 		D91D2FDA1E3AC4A4006B160B /* StreamTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamTableViewCell.swift; sourceTree = "<group>"; };
 		D91D2FDB1E3AC4A4006B160B /* StreamTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StreamTableViewCell.xib; sourceTree = "<group>"; };
+		D93E26001E3AD55000102B51 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		E928D4005B1A6395F4A3FD3B /* Pods_TwitchiOSApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwitchiOSApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -141,6 +143,7 @@
 		D91D2F891E3A68A2006B160B /* TwitchiOSApp */ = {
 			isa = PBXGroup;
 			children = (
+				D93E26001E3AD55000102B51 /* README.txt */,
 				D91D2FCC1E3AB603006B160B /* UI */,
 				D91D2FB91E3A6FAD006B160B /* Network */,
 				D91D2F8A1E3A68A2006B160B /* AppDelegate.swift */,
@@ -356,6 +359,7 @@
 				D91D2F921E3A68A2006B160B /* Assets.xcassets in Resources */,
 				D91D2F901E3A68A2006B160B /* Main.storyboard in Resources */,
 				D91D2FDD1E3AC4A4006B160B /* StreamTableViewCell.xib in Resources */,
+				D93E26011E3AD55000102B51 /* README.txt in Resources */,
 				D91D2FD01E3AB6AA006B160B /* GameTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
