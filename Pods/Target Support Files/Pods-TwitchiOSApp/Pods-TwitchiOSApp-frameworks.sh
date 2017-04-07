@@ -82,20 +82,3 @@ strip_invalid_archs() {
   fi
 }
 
-
-if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "$BUILT_PRODUCTS_DIR/Alamofire/Alamofire.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/AlamofireImage/AlamofireImage.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/MBProgressHUD/MBProgressHUD.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/RWPickFlavor/RWPickFlavor.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/SKTagView/SKTagView.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/SharedWOK/SharedWOK.framework"
-fi
-if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "$BUILT_PRODUCTS_DIR/Alamofire/Alamofire.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/AlamofireImage/AlamofireImage.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/MBProgressHUD/MBProgressHUD.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/RWPickFlavor/RWPickFlavor.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/SKTagView/SKTagView.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/SharedWOK/SharedWOK.framework"
-fi
