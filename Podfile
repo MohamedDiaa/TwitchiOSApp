@@ -10,6 +10,7 @@ target ‘TwitchiOSApp’ do
     pod 'Alamofire'
     pod 'AlamofireImage'
     pod 'RWPickFlavor',:git => 'https://github.com/MohamedDiaa/RWPickFlavor.git'
-    
+    pod 'SKTagView'
+
     pod 'SharedWOK'
 end

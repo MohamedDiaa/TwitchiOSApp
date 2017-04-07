@@ -7,12 +7,14 @@ PODS:
     - Alamofire
     - MBProgressHUD
   - SharedWOK (0.1.1)
+  - SKTagView (0.9.2)
 
 DEPENDENCIES:
   - Alamofire
   - AlamofireImage
   - RWPickFlavor (from `https://github.com/MohamedDiaa/RWPickFlavor.git`)
   - SharedWOK
+  - SKTagView
 
 EXTERNAL SOURCES:
   RWPickFlavor:
@@ -29,7 +31,8 @@ SPEC CHECKSUMS:
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   RWPickFlavor: 4d99c1ae41b531ab865f8684b99ae1f7097bbd46
   SharedWOK: 4d1431bd16fba0c35eb1c12527e7bc71de233455
+  SKTagView: 59cdadcd16e4a09300746ad1811a72371e1327f7
 
-PODFILE CHECKSUM: 9279e62e24e7c1fd7adaed62cc9174da04574a7e
+PODFILE CHECKSUM: 4a90be4dae62a25185ed61dbc501b3195b059836
 
 COCOAPODS: 1.1.1

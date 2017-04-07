@@ -1,2 +1,6 @@
 # Cocoapods
 Pods/
+
+# Xcode 
+xcuserdata/
+DerivedData/
