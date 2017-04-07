@@ -1,3 +1,38 @@
-PODFILE CHECKSUM: bfcded001501ccb47884bd34eb26fab6a6de3ccd
+PODS:
+  - Alamofire (4.4.0)
+  - AlamofireImage (3.2.0):
+    - Alamofire (~> 4.1)
+  - MBProgressHUD (1.0.0)
+  - RWPickFlavor (0.1.0):
+    - Alamofire
+    - MBProgressHUD
+  - SharedWOK (0.1.1)
+  - SKTagView (0.9.2)
+
+DEPENDENCIES:
+  - Alamofire
+  - AlamofireImage
+  - RWPickFlavor (from `https://github.com/MohamedDiaa/RWPickFlavor.git`)
+  - SharedWOK
+  - SKTagView
+
+EXTERNAL SOURCES:
+  RWPickFlavor:
+    :git: https://github.com/MohamedDiaa/RWPickFlavor.git
+
+CHECKOUT OPTIONS:
+  RWPickFlavor:
+    :commit: f5b128cf8528bf3cd89a336485985893df62f913
+    :git: https://github.com/MohamedDiaa/RWPickFlavor.git
+
+SPEC CHECKSUMS:
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  AlamofireImage: 157ed682cc81d3b9db4fb90c1f12180ac552d93b
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  RWPickFlavor: 4d99c1ae41b531ab865f8684b99ae1f7097bbd46
+  SharedWOK: 4d1431bd16fba0c35eb1c12527e7bc71de233455
+  SKTagView: 59cdadcd16e4a09300746ad1811a72371e1327f7
+
+PODFILE CHECKSUM: 564aebaefc4200fac778099093df3689966a0f9d
 
 COCOAPODS: 1.1.1
