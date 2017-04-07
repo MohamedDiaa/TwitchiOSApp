@@ -6,7 +6,7 @@ PODS:
   - RWPickFlavor (0.1.0):
     - Alamofire
     - MBProgressHUD
-  - SharedWOK (0.1.0)
+  - SharedWOK (0.1.1)
 
 DEPENDENCIES:
   - Alamofire
@@ -28,7 +28,7 @@ SPEC CHECKSUMS:
   AlamofireImage: 157ed682cc81d3b9db4fb90c1f12180ac552d93b
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   RWPickFlavor: 4d99c1ae41b531ab865f8684b99ae1f7097bbd46
-  SharedWOK: b0ae72a9f25face9afc87d01a9cd3564cdd3615f
+  SharedWOK: 4d1431bd16fba0c35eb1c12527e7bc71de233455
 
 PODFILE CHECKSUM: 9279e62e24e7c1fd7adaed62cc9174da04574a7e
 

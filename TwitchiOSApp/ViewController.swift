@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         navController.view.frame = self.view.bounds
         self.view.addSubview(navController.view)
         
-     // let _ =  Language.Arabic.flag
+      let _ =  Language.Arabic.flag
     }
 
     override func didReceiveMemoryWarning() {
