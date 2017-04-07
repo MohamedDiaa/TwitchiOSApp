@@ -1,16 +1,32 @@
 PODS:
-  - Alamofire (4.2.0)
+  - Alamofire (4.4.0)
   - AlamofireImage (3.2.0):
     - Alamofire (~> 4.1)
+  - MBProgressHUD (1.0.0)
+  - RWPickFlavor (0.1.0):
+    - Alamofire
+    - MBProgressHUD
 
 DEPENDENCIES:
   - Alamofire
   - AlamofireImage
+  - RWPickFlavor (from `https://github.com/MohamedDiaa/RWPickFlavor.git`)
+
+EXTERNAL SOURCES:
+  RWPickFlavor:
+    :git: https://github.com/MohamedDiaa/RWPickFlavor.git
+
+CHECKOUT OPTIONS:
+  RWPickFlavor:
+    :commit: f5b128cf8528bf3cd89a336485985893df62f913
+    :git: https://github.com/MohamedDiaa/RWPickFlavor.git
 
 SPEC CHECKSUMS:
-  Alamofire: aa2e09d871c9160ac53c90e83c68064a94e3dfbe
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
   AlamofireImage: 157ed682cc81d3b9db4fb90c1f12180ac552d93b
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  RWPickFlavor: 4d99c1ae41b531ab865f8684b99ae1f7097bbd46
 
-PODFILE CHECKSUM: caa7f1691b2cf0a4385b12c69561d32e4a780273
+PODFILE CHECKSUM: 58f07f1d3113bf4c31415d6c2bc029818178cfd3
 
 COCOAPODS: 1.1.1
