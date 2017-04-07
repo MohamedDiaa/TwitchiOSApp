@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import SharedWOK
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -20,6 +21,8 @@ class ViewController: UIViewController {
         self.addChildViewController(navController)
         navController.view.frame = self.view.bounds
         self.view.addSubview(navController.view)
+        
+     // let _ =  Language.Arabic.flag
     }
 
     override func didReceiveMemoryWarning() {

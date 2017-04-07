@@ -29,6 +29,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SharedWOK.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -37,7 +42,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>469051C377D0345F1A3A12E6AC282F45</key>
+		<key>492EEFE2B18527569A59C9B2EB5C706E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6AE197446BCE8EB9DA00E983DBAC4CA6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -52,7 +62,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F1561406D41EA544131FD8D7ED738932</key>
+		<key>C38E5B222BAC9B20F0B5ADDC24C22E36</key>
 		<dict>
 			<key>primary</key>
 			<true/>
